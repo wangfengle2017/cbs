@@ -25,7 +25,7 @@ class can_adapter():
         if self._bus :
             msg = self._bus.recv(timeout=timeout)            
             if msg:
-                print(msg)
+                # print(msg)
                 # convert can message object to data 
                 data = {}        
                 data["can-id"] = msg.arbitration_id
@@ -92,5 +92,5 @@ class can_task(Thread):
             if self._stopped:
                 self._can.shutdown()
                 time.sleep(1)
-                print("can task terminate")
+                # print("can task terminate")
                 break

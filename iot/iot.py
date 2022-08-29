@@ -1,9 +1,7 @@
 # IoT platform
-
-from glob import glob
+ 
 import time
-import json
-
+ 
 from threading import Thread
 from comm.mqtt_task import mqtt_task
 

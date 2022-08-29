@@ -4,12 +4,11 @@
  
 import time
 
-
 from comm.can_task import can_task
 from comm.mqtt_task import mqtt_task
  
-from testcode.test import can_test
-from testcode.test import mqtt_test
+# from testcode.test import can_test
+# from testcode.test import mqtt_test
  
 class gateway:
     def __init__(self): 
