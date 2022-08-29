@@ -53,6 +53,6 @@ class mqtt_task(Thread):
         self._client.publish(title, data)
          
     def run(self):
-        print(self._client_id + " start ...")
+        print(self._client_id + " starts ...")
         self._client.loop_forever()
-        print(self._client_id + " is stoped")
+        print(self._client_id + " terminates")

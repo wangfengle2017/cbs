@@ -49,7 +49,7 @@ if __name__ == '__main__':
 
     def can_data_handler(data):
         global mt
-        print("CAN-Data-Handler: Publish - " + str(data))
+        print("CAN-Data-Handler: Publish - cbs/from-device " + str(data))
         mt.publish(title="cbs/from-device", data=str(data))
      
     def mqtt_on_connect(client, userdata, flags, rc):
@@ -58,7 +58,7 @@ if __name__ == '__main__':
     def mqtt_on_message(client, userdata, msg):
         global ct
         print("MQTT-Client received: " + msg.topic+" "+str(msg.payload)) 
-        print(type(msg.payload))
+        # print(type(msg.payload))
 
         # convert msg to dict
         data = eval(msg.payload.decode("utf-8"))
